@@ -7,5 +7,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 )
-
+const renderer = new THREE.WebGLRenderer()
 console.log(scene)
+console.log(camera)
+console.log(renderer)
