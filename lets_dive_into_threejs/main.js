@@ -29,7 +29,7 @@ const planeMaterial = new THREE.MeshPhongMaterial({
 })
 const planeMesh = new THREE.Mesh(planGeometry, planeMaterial)
 scene.add(planeMesh)
-console.log(planeMesh)
+console.log(planeMesh.geometry)
 const light = new THREE.DirectionalLight(0xffffff, 1)
 light.position.set(0, 0, 1)
 
