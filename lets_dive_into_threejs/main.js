@@ -30,6 +30,10 @@ const planeMaterial = new THREE.MeshPhongMaterial({
 const planeMesh = new THREE.Mesh(planGeometry, planeMaterial)
 scene.add(planeMesh)
 console.log(planeMesh.geometry.attributes.position.array)
+const { array } = planeMesh.geometry.attributes.position.array.length
+for (let i = 0; i < array.length; i++) {
+  console.log(i)
+}
 const light = new THREE.DirectionalLight(0xffffff, 1)
 light.position.set(0, 0, 1)
 
