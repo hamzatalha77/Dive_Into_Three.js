@@ -8,9 +8,16 @@ const camera = new THREE.PerspectiveCamera(
   1000
 )
 const renderer = new THREE.WebGLRenderer()
-console.log(scene)
-console.log(camera)
-console.log(renderer)
 
 renderer.setSize(innerWidth, innerHeight)
 document.body.appendChild(renderer.domElement)
+
+const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
+
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+
+console.log(scene)
+console.log(camera)
+console.log(renderer)
+console.log(boxGeometry)
+console.log(material)
