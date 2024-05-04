@@ -16,8 +16,23 @@ const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
 
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
 
+const mesh = new THREE.Mesh(boxGeometry, material)
+
+scene.add(mesh)
+
+camera.position.z = 5
+
+function animate() {
+  requestAnimationFrame(animate)
+  renderer.render(scene, camera)
+  mesh.rotation.x += 0.01
+  mesh.rotation.y += 0.01
+}
+
+animate()
 console.log(scene)
 console.log(camera)
 console.log(renderer)
 console.log(boxGeometry)
 console.log(material)
+console.log(mesh)
