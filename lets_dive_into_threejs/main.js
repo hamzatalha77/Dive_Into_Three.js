@@ -63,7 +63,6 @@ scene.add(light)
 function animate() {
   requestAnimationFrame(animate)
   renderer.render(scene, camera)
-  // planeMesh.rotation.x += 0.01
 }
 
 animate()
