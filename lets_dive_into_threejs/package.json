@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "dat.gui": "^0.7.9",
+    "react-router-dom": "^6.23.0",
     "three": "^0.164.1"
   }
 }
