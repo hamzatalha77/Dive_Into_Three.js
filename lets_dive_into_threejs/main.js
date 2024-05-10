@@ -5,17 +5,21 @@ const gui = new dat.GUI()
 const world = {
   plane: {
     width: 10,
-    height: 10
+    height: 10,
+    widthSegments: 10,
+    heightSegments: 10
   }
 }
 gui.add(world.plane, 'width', 1, 20).onChange(generatePlane)
 gui.add(world.plane, 'height', 1, 20).onChange(generatePlane)
+gui.add(world.plane, 'widthSegments', 1, 20).onChange(generatePlane)
+gui.add(world.plane, 'heightSegments', 1, 20).onChange(generatePlane)
 function generatePlane() {
   planeMesh.geometry = new THREE.PlaneGeometry(
     world.plane.width,
     world.plane.height,
-    10,
-    10
+    world.plane.widthSegments,
+    world.plane.heightSegments
   )
   const { array } = planeMesh.geometry.attributes.position
   for (let i = 0; i < array.length; i += 3) {
