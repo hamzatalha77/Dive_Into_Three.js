@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import * as dat from 'dat.gui'
-
+import { OrbitControls } from 'three'
 const gui = new dat.GUI()
 const world = {
   plane: {
