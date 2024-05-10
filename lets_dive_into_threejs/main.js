@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import * as dat from 'dat.gui'
-import { OrbitControls } from 'three'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+console.log(OrbitControls)
 const gui = new dat.GUI()
 const world = {
   plane: {
