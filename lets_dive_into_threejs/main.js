@@ -12,8 +12,8 @@ const world = {
 }
 gui.add(world.plane, 'width', 1, 20).onChange(generatePlane)
 gui.add(world.plane, 'height', 1, 20).onChange(generatePlane)
-gui.add(world.plane, 'widthSegments', 1, 20).onChange(generatePlane)
-gui.add(world.plane, 'heightSegments', 1, 20).onChange(generatePlane)
+gui.add(world.plane, 'widthSegments', 1, 50).onChange(generatePlane)
+gui.add(world.plane, 'heightSegments', 1, 50).onChange(generatePlane)
 function generatePlane() {
   planeMesh.geometry = new THREE.PlaneGeometry(
     world.plane.width,
