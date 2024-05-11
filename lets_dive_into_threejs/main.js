@@ -43,6 +43,8 @@ renderer.setSize(innerWidth, innerHeight)
 renderer.setPixelRatio(devicePixelRatio)
 document.body.appendChild(renderer.domElement)
 
+new OrbitControls(camera, renderer.domElement)
+
 camera.position.z = 5
 const planGeometry = new THREE.PlaneGeometry(10, 10, 10, 10)
 const planeMaterial = new THREE.MeshPhongMaterial({
@@ -63,7 +65,12 @@ for (let i = 0; i < array.length; i += 3) {
 const light = new THREE.DirectionalLight(0xffffff, 1)
 light.position.set(0, 0, 1)
 
+const backLight = new THREE.DirectionalLight(0xffffff, 1)
+backLight.position.set(0, 0, -1)
+
 scene.add(light)
+
+scene.add(backLight)
 
 function animate() {
   requestAnimationFrame(animate)
@@ -71,3 +78,13 @@ function animate() {
 }
 
 animate()
+
+const mouse = {
+  x: undefined,
+  y: undefined
+}
+
+addEventListener('mousemove', (event) => {
+  ;(mouse.x = event.clientX / innerWidth), (mouse.y = event.clientY)
+  console.log(mouse)
+})
